@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shopfee_clean_arch/features/components/catalog_selection_widget.dart';
-import 'package:shopfee_clean_arch/features/components/catalog_widget.dart';
-import 'package:shopfee_clean_arch/features/components/product_information_list_widget.dart';
-import 'package:shopfee_clean_arch/features/components/search_bar_widget.dart';
+import 'package:shopfee_clean_arch/features/components/catalog-selection-widget/catalog_selection_widget.dart';
+import 'package:shopfee_clean_arch/features/components/catalog/catalog_widget.dart';
+import 'package:shopfee_clean_arch/features/components/list-product-widget/list_view_products_widget.dart';
+import 'package:shopfee_clean_arch/features/components/product-information-list-widget/product_information_list_widget.dart';
+import 'package:shopfee_clean_arch/features/components/search-bar-widget/search_bar_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,12 +17,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            SliverAppBar(
-              expandedHeight: 304,
-              backgroundColor: Colors.blue,
-              flexibleSpace: Column(
+        child: Column(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 304,
+              child: Column(
                 children: [
                   const SearcBarWidget(),
                   _size(16, null),
@@ -29,24 +30,12 @@ class _HomePageState extends State<HomePage> {
                   _size(16, null),
                   const CatalogSelectionWidget(),
                   _size(8, null),
+                  ProductInformationListWidget(),
                 ],
               ),
             ),
-            SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (BuildContext context, int index) {
-                  return const ListTile(
-                    leading: CircleAvatar(
-                      child: Icon(Icons.person),
-                    ),
-                    title: Text("ola"),
-                    subtitle: Text("xaaas"),
-                    trailing: Text("jxasihhigxa"),
-                  );
-                },
-                childCount: 20,
-              ),
-            ),
+            _size(16, null),
+            const Expanded(child: ListViewProductsWidget()),
           ],
         ),
       ),

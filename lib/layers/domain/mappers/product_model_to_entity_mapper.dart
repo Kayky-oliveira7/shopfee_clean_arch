@@ -9,6 +9,6 @@ class ProductModelToEntityMapper {
 
   ProductEntity toEntity() {
     return ProductEntity(_productModel.nameProduct, _productModel.productRecipe,
-        _productModel.price);
+        _productModel.price, _productModel.imageProduct);
   }
 }
