@@ -15,9 +15,10 @@ class SearcBarWidget extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "What would you like to drink today?",
                 labelStyle: GoogleFonts.poppins(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 12,
-                    color: const Color(0xffCACACA)),
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  color: const Color(0xffCACACA),
+                ),
                 suffixIcon: const Icon(
                   Icons.search,
                   size: 24,
@@ -33,11 +34,15 @@ class SearcBarWidget extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(
+            width: 20,
+          ),
           IconButton(
             onPressed: () {},
             icon: const Icon(
               Icons.notifications_none_outlined,
               size: 24,
+              color: Color(0xff5D4037),
             ),
           ),
         ],

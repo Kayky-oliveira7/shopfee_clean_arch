@@ -10,24 +10,84 @@ class ProductMockDataSourceImpl implements ProductDataSource {
       List<ProductModel> listProducts = [];
 
       listProducts.add(
-        ProductModel("Coffee Milk", "Ice americano + fresh milk ", 25.000),
+        ProductModel(
+          "Coffee Milk",
+          "Ice americano + fresh milk ",
+          25.000,
+          "assets/images/coffe-milk-image.png",
+        ),
       );
       listProducts.add(
         ProductModel(
-            "Caramel Latte", "Espresso, Fresh Milk and Caramel ", 25.000),
+          "Caramel Latte",
+          "Espresso, Fresh Milk and Caramel ",
+          25.000,
+          "assets/images/cocoa-caramel-image.png",
+        ),
       );
       listProducts.add(
-        ProductModel("Flat White",
-            "Smooth ristretto shots of espresso with milk", 25.000),
+        ProductModel(
+          "Caramel Latte",
+          "Espresso, Fresh Milk and Caramel ",
+          25.000,
+          "assets/images/cocoa-caramel-image.png",
+        ),
       );
       listProducts.add(
-        ProductModel("Machiato", "Espresso and cream machiato ", 18.000),
+        ProductModel(
+          "Caramel Latte",
+          "Espresso, Fresh Milk and Caramel ",
+          25.000,
+          "assets/images/cocoa-caramel-image.png",
+        ),
       );
       listProducts.add(
-        ProductModel("Coffee Milk", "Ice americano + fresh milk ", 25.000),
+        ProductModel(
+          "Flat White",
+          "Smooth ristretto shots of espresso with milk",
+          25.000,
+          "assets/images/nitro-cold-brew-image.png",
+        ),
       );
       listProducts.add(
-        ProductModel("Coffee Milk", "Ice americano + fresh milk ", 25.000),
+        ProductModel(
+          "Flat White",
+          "Smooth ristretto shots of espresso with milk",
+          25.000,
+          "assets/images/nitro-cold-brew-image.png",
+        ),
+      );
+      listProducts.add(
+        ProductModel(
+          "Flat White",
+          "Smooth ristretto shots of espresso with milk",
+          25.000,
+          "assets/images/nitro-cold-brew-image.png",
+        ),
+      );
+      listProducts.add(
+        ProductModel(
+          "Machiato",
+          "Espresso and cream machiato ",
+          18.000,
+          "assets/images/caffe-macha-image.png",
+        ),
+      );
+      listProducts.add(
+        ProductModel(
+          "Coffee Milk",
+          "Ice americano + fresh milk ",
+          25.000,
+          "assets/images/coffe-milk-image.png",
+        ),
+      );
+      listProducts.add(
+        ProductModel(
+          "Coffee Milk",
+          "Ice americano + fresh milk ",
+          25.000,
+          "assets/images/coffe-milk-image.png",
+        ),
       );
       return listProducts;
     });

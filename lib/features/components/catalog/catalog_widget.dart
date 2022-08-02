@@ -9,7 +9,6 @@ class CatalogWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Container(
         decoration: const BoxDecoration(
-          color: Colors.redAccent,
           borderRadius: BorderRadius.all(
             Radius.circular(8),
           ),
