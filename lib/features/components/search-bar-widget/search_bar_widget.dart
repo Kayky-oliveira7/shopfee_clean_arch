@@ -6,47 +6,44 @@ class SearcBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 16, top: 8),
-      child: Row(
-        children: [
-          Expanded(
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "What would you like to drink today?",
-                labelStyle: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 12,
-                  color: const Color(0xffCACACA),
+    return Row(
+      children: [
+        Expanded(
+          child: TextFormField(
+            decoration: InputDecoration(
+              labelText: "What would you like to drink today?",
+              labelStyle: GoogleFonts.poppins(
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                color: const Color(0xffCACACA),
+              ),
+              suffixIcon: const Icon(
+                Icons.search,
+                size: 24,
+              ),
+              border: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(16.0),
                 ),
-                suffixIcon: const Icon(
-                  Icons.search,
-                  size: 24,
-                ),
-                border: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(16.0),
-                  ),
-                  borderSide: BorderSide(
-                    color: Color(0xffD7CCC8),
-                  ),
+                borderSide: BorderSide(
+                  color: Color(0xffD7CCC8),
                 ),
               ),
             ),
           ),
-          const SizedBox(
-            width: 20,
+        ),
+        const SizedBox(
+          width: 20,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.notifications_none_outlined,
+            size: 24,
+            color: Color(0xff5D4037),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.notifications_none_outlined,
-              size: 24,
-              color: Color(0xff5D4037),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
