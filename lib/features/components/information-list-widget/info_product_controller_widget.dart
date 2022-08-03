@@ -5,13 +5,13 @@ import 'package:shopfee_clean_arch/layers/domain/entitys/info_product_entity.dar
 import 'package:shopfee_clean_arch/layers/domain/usecases/get_info_product_usecase_impl.dart';
 part 'info_product_controller_widget.g.dart';
 
-class InfoProductControllerWidget = _InfoProductControllerWidgetBase
+class InfoProductControllerWidget = InfoProductControllerWidgetBase
     with _$InfoProductControllerWidget;
 
-abstract class _InfoProductControllerWidgetBase with Store {
+abstract class InfoProductControllerWidgetBase with Store {
   final GetInfoProductUseCaseImpl _getInfoProductUseCaseImpl;
 
-  _InfoProductControllerWidgetBase(this._getInfoProductUseCaseImpl);
+  InfoProductControllerWidgetBase(this._getInfoProductUseCaseImpl);
 
   @observable
   AppState state = StartAppState();
