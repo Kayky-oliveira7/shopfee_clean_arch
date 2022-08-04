@@ -24,52 +24,62 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     _size(8, null),
                     const SearcBarWidget(),
-                    _size(8, null),
+                    _size(16, null),
                     const SizedBox(
                       height: 137,
                       child: CatalogWidget(
                         image: "assets/images/coffee_image.png",
                       ),
                     ),
-                  ],
-                ),
-              ),
-              _size(16, null),
-              SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  children: [
+                    _size(8, null),
                     const ProductSelectionWidget(),
                     _size(8, null),
-                    Row(
-                      children: [
-                        const InformationListProductWidget(
-                          imageIcon: "assets/icons/filter-icon.png",
-                          text: "Filter",
-                        ),
-                        _size(null, 8),
-                        const InformationListProductWidget(
-                          imageIcon: "assets/icons/rating-icon.png",
-                          text: "Rating 4.5+",
-                        ),
-                        _size(null, 8),
-                        const InformationListProductWidget(
-                          imageIcon: "assets/icons/price-icon.png",
-                          text: "Price",
-                        ),
-                        _size(null, 8),
-                        const InformationListProductWidget(
-                          imageIcon: "assets/icons/promotion-icon.png",
-                          text: "Promotion",
-                        ),
-                      ],
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          const InformationListProductWidget(
+                            imageIcon: "assets/icons/filter-icon.png",
+                            text: "Filter",
+                          ),
+                          _size(null, 5),
+                          const InformationListProductWidget(
+                            imageIcon: "assets/icons/rating-icon.png",
+                            text: "Rating 4.5+",
+                          ),
+                          _size(null, 5),
+                          const InformationListProductWidget(
+                            imageIcon: "assets/icons/price-icon.png",
+                            text: "Price",
+                          ),
+                          _size(null, 5),
+                          const InformationListProductWidget(
+                            imageIcon: "assets/icons/promotion-icon.png",
+                            text: "Promotion",
+                          ),
+                          _size(null, 5),
+                          const InformationListProductWidget(
+                            imageIcon: "assets/icons/promotion-icon.png",
+                            text: "Promotion",
+                          ),
+                          _size(null, 5),
+                          const InformationListProductWidget(
+                            imageIcon: "assets/icons/promotion-icon.png",
+                            text: "Promotion",
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
               ),
+              _size(16, null),
               const Expanded(
                 child: ListViewProductsWidget(),
               ),
