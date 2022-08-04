@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopfee_clean_arch/features/components/catalog-view-widget/catalog_widget.dart';
 import 'package:shopfee_clean_arch/features/components/information-list-widget/information_list_widget.dart';
+import 'package:shopfee_clean_arch/features/components/list-product-widget/list_view_products_widget.dart';
 import 'package:shopfee_clean_arch/features/components/search-bar-widget/search_bar_widget.dart';
 
-class CatalogSelectionWidget extends StatefulWidget {
-  const CatalogSelectionWidget({Key? key}) : super(key: key);
+class ProductSelectionWidget extends StatefulWidget {
+  const ProductSelectionWidget({Key? key}) : super(key: key);
 
   @override
-  State<CatalogSelectionWidget> createState() => _CatalogSelectionWidgetState();
+  State<ProductSelectionWidget> createState() => _ProductSelectionWidgetState();
 }
 
-class _CatalogSelectionWidgetState extends State<CatalogSelectionWidget>
+class _ProductSelectionWidgetState extends State<ProductSelectionWidget>
     with TickerProviderStateMixin {
   TabController? tabcontroller;
 
@@ -25,21 +26,6 @@ class _CatalogSelectionWidgetState extends State<CatalogSelectionWidget>
   Widget build(BuildContext context) {
     return Column(
       children: [
-        _size(8),
-        const SearcBarWidget(),
-        _size(16),
-        SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: 137,
-          child: TabBarView(
-            controller: tabcontroller,
-            children: const [
-              CatalogWidget(image: "assets/images/coffee_image.png"),
-              CatalogWidget(image: "assets/images/coffee_image.png"),
-              CatalogWidget(image: "assets/images/coffee_image.png"),
-            ],
-          ),
-        ),
         TabBar(
           labelColor: const Color(0xff5D4037),
           indicatorColor: const Color(0xff5D4037),
@@ -61,8 +47,6 @@ class _CatalogSelectionWidgetState extends State<CatalogSelectionWidget>
             ),
           ],
         ),
-        _size(6),
-        const InformationListWidget(),
       ],
     );
   }
