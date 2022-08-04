@@ -9,22 +9,24 @@ class InformationListProductWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Container(
-        decoration: const BoxDecoration(
-          color: Colors.red,
-          borderRadius: BorderRadius.all(
-            Radius.circular(12),
+    return Container(
+      padding: const EdgeInsets.only(left: 13, right: 8),
+      decoration: const BoxDecoration(
+        color: Color(0xffEFEBE9),
+        borderRadius: BorderRadius.all(
+          Radius.circular(12),
+        ),
+      ),
+      height: 34,
+      child: Row(
+        children: [
+          Image.asset(
+            imageIcon,
+            color: Colors.black,
           ),
-        ),
-        height: 34,
-        child: Row(
-          children: [
-            Image.asset(imageIcon),
-            Text(text),
-          ],
-        ),
+          _size(5.34, null),
+          Text(text),
+        ],
       ),
     );
   }
