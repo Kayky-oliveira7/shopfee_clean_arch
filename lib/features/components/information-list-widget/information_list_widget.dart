@@ -45,7 +45,8 @@ class _ProductInformationListWidgetState extends State<InformationListWidget> {
 
   Widget _infoProductList(AppState state) {
     if (state is DataAppState<List<InfoProductEntity>>) {
-      return Expanded(
+      return SizedBox(
+        height: 50,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {

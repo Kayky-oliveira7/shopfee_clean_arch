@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shopfee_clean_arch/features/components/catalog-selection-widget/catalog_selection_widget.dart';
+import 'package:shopfee_clean_arch/features/components/catalog-view-widget/catalog_widget.dart';
+import 'package:shopfee_clean_arch/features/components/information-list-widget/information_list_widget.dart';
 import 'package:shopfee_clean_arch/features/components/list-product-widget/list_view_products_widget.dart';
+import 'package:shopfee_clean_arch/features/components/product_selection_widget/product_selection_widget.dart';
+import 'package:shopfee_clean_arch/features/components/search-bar-widget/search_bar_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,8 +23,23 @@ class _HomePageState extends State<HomePage> {
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: 304,
-                child: const CatalogSelectionWidget(),
+                child: Column(
+                  children: [
+                    _size(8, null),
+                    const SearcBarWidget(),
+                    _size(16, null),
+                    const SizedBox(
+                      height: 137,
+                      child: CatalogWidget(
+                        image: "assets/images/coffee_image.png",
+                      ),
+                    ),
+                    _size(8, null),
+                    const ProductSelectionWidget(),
+                    _size(8, null),
+                    const InformationListWidget(),
+                  ],
+                ),
               ),
               _size(16, null),
               const Expanded(
