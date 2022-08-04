@@ -27,24 +27,49 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     _size(8, null),
                     const SearcBarWidget(),
-                    _size(16, null),
+                    _size(8, null),
                     const SizedBox(
                       height: 137,
                       child: CatalogWidget(
                         image: "assets/images/coffee_image.png",
                       ),
                     ),
-                    _size(8, null),
-                    const ProductSelectionWidget(),
-                    _size(8, null),
-                    const InformationListProductWidget(
-                      imageIcon: "assets/icons/filter-icon.png",
-                      text: "Filter",
-                    ),
                   ],
                 ),
               ),
               _size(16, null),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  children: [
+                    const ProductSelectionWidget(),
+                    _size(8, null),
+                    Row(
+                      children: [
+                        const InformationListProductWidget(
+                          imageIcon: "assets/icons/filter-icon.png",
+                          text: "Filter",
+                        ),
+                        _size(null, 8),
+                        const InformationListProductWidget(
+                          imageIcon: "assets/icons/rating-icon.png",
+                          text: "Rating 4.5+",
+                        ),
+                        _size(null, 8),
+                        const InformationListProductWidget(
+                          imageIcon: "assets/icons/price-icon.png",
+                          text: "Price",
+                        ),
+                        _size(null, 8),
+                        const InformationListProductWidget(
+                          imageIcon: "assets/icons/promotion-icon.png",
+                          text: "Promotion",
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
               const Expanded(
                 child: ListViewProductsWidget(),
               ),

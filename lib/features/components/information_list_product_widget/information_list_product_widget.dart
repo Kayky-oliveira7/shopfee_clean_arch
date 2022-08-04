@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class InformationListProductWidget extends StatelessWidget {
   final String imageIcon;
@@ -11,7 +10,9 @@ class InformationListProductWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Container(
+        height: 34,
         child: Row(
           children: [
             Image.asset(imageIcon),
