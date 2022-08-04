@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shopfee_clean_arch/features/components/catalog-view-widget/catalog_widget.dart';
-import 'package:shopfee_clean_arch/features/components/information-list-widget/information_list_widget.dart';
-import 'package:shopfee_clean_arch/features/components/list-product-widget/list_view_products_widget.dart';
-import 'package:shopfee_clean_arch/features/components/search-bar-widget/search_bar_widget.dart';
 
 class ProductSelectionWidget extends StatefulWidget {
   const ProductSelectionWidget({Key? key}) : super(key: key);

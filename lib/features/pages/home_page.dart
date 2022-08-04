@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopfee_clean_arch/features/components/catalog-view-widget/catalog_widget.dart';
-import 'package:shopfee_clean_arch/features/components/information-list-widget/information_list_widget.dart';
+import 'package:shopfee_clean_arch/features/components/information_list_product_widget/information_list_product_widget.dart';
 import 'package:shopfee_clean_arch/features/components/list-product-widget/list_view_products_widget.dart';
 import 'package:shopfee_clean_arch/features/components/product_selection_widget/product_selection_widget.dart';
 import 'package:shopfee_clean_arch/features/components/search-bar-widget/search_bar_widget.dart';
@@ -37,7 +37,10 @@ class _HomePageState extends State<HomePage> {
                     _size(8, null),
                     const ProductSelectionWidget(),
                     _size(8, null),
-                    const InformationListWidget(),
+                    const InformationListProductWidget(
+                      imageIcon: "assets/icons/filter-icon.png",
+                      text: "Filter",
+                    ),
                   ],
                 ),
               ),
