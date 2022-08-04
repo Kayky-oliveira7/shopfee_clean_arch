@@ -12,6 +12,12 @@ class InformationListProductWidget extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.red,
+          borderRadius: BorderRadius.all(
+            Radius.circular(12),
+          ),
+        ),
         height: 34,
         child: Row(
           children: [
