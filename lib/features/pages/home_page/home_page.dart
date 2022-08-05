@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shopfee_clean_arch/features/components/catalog-view-widget/catalog_widget.dart';
 import 'package:shopfee_clean_arch/features/components/information_list_product_widget/information_list_product_widget.dart';
-import 'package:shopfee_clean_arch/features/components/list-product-widget/list_view_products_widget.dart';
-import 'package:shopfee_clean_arch/features/components/product_selection_widget/product_selection_widget.dart';
 import 'package:shopfee_clean_arch/features/components/search-bar-widget/search_bar_widget.dart';
+import 'package:shopfee_clean_arch/features/pages/coffee_page.dart';
+import 'package:shopfee_clean_arch/features/pages/non_coffee_page.dart';
+import 'package:shopfee_clean_arch/features/pages/pastry_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,7 +14,15 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  TabController? tabcontroller;
+
+  @override
+  void initState() {
+    super.initState();
+    tabcontroller = TabController(length: 3, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,15 +44,42 @@ class _HomePageState extends State<HomePage> {
                       child: CatalogWidget(),
                     ),
                     _size(8, null),
-                    const ProductSelectionWidget(),
+                    TabBar(
+                      labelColor: const Color(0xff5D4037),
+                      indicatorColor: const Color(0xff5D4037),
+                      indicatorWeight: 4,
+                      controller: tabcontroller,
+                      labelStyle: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                      ),
+                      tabs: const [
+                        Tab(
+                          text: "Coffee",
+                        ),
+                        Tab(
+                          text: "Non Coffee",
+                        ),
+                        Tab(
+                          text: "Pastry",
+                        ),
+                      ],
+                    ),
                     _size(8, null),
                     const InformationListProductWidget()
                   ],
                 ),
               ),
               _size(16, null),
-              const Expanded(
-                child: ListViewProductsWidget(),
+              Expanded(
+                child: TabBarView(
+                  controller: tabcontroller,
+                  children: const [
+                    CoffeePage(),
+                    NonCoffeePage(),
+                    PastryPage(),
+                  ],
+                ),
               ),
             ],
           ),
