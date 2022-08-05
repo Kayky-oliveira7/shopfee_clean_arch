@@ -20,7 +20,7 @@ abstract class _CatalogControllerWidgetBase with Store {
   void load() {
     state = LoadingAppState();
     _getCatalogUseCaseImpl.call(NoParam()).then((value) {
-      state = DataAppState<CatalogEntity>(value);
+      state = DataAppState<List<CatalogEntity>>(value);
     });
   }
 }
