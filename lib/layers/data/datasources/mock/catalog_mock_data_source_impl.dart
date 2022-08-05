@@ -5,7 +5,9 @@ class CatlogMockDataSourceImpl implements CatalogDataSource {
   @override
   Future<CatalogModel> getImageCatolog() {
     return Future.delayed(Duration(seconds: 4)).then(
-      (value) => CatalogModel(""),
+      (value) => CatalogModel(
+        "assets/images/coffee_image.png",
+      ),
     );
   }
 }

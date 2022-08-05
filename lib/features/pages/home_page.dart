@@ -31,9 +31,7 @@ class _HomePageState extends State<HomePage> {
                     _size(16, null),
                     const SizedBox(
                       height: 137,
-                      child: CatalogWidget(
-                        image: "assets/images/coffee_image.png",
-                      ),
+                      child: CatalogWidget(),
                     ),
                     _size(8, null),
                     const ProductSelectionWidget(),
