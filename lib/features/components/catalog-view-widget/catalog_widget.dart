@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:shopfee_clean_arch/features/components/catalog-view-widget/catalog_controller_widget.dart';
+import 'package:shopfee_clean_arch/layers/data/datasources/catalog_data_source.dart';
+import 'package:shopfee_clean_arch/layers/data/datasources/mock/catalog_mock_data_source_impl.dart';
+import 'package:shopfee_clean_arch/layers/data/repoistories/catalog_repository_impl.dart';
+import 'package:shopfee_clean_arch/layers/domain/repositories/catalogt_repository.dart';
+import 'package:shopfee_clean_arch/layers/domain/usecases/get_catalog_usecase_impl.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CatalogWidget extends StatefulWidget {
@@ -11,6 +17,20 @@ class CatalogWidget extends StatefulWidget {
 
 class _CatalogWidgetState extends State<CatalogWidget> {
   final controller = PageController();
+
+  late CatalogRepository _catalogRepository;
+  CatalogDataSource catalogDataSource = CatlogMockDataSourceImpl();
+  late GetCatalogUseCaseImpl _getCatalogUseCaseImpl;
+  late CatalogControllerWidget _catalogControllerWidget;
+
+  @override
+  void initState() {
+    _catalogRepository = CatalogRepositoryImpl(catalogDataSource);
+    _getCatalogUseCaseImpl = GetCatalogUseCaseImpl(_catalogRepository);
+    _catalogControllerWidget = CatalogControllerWidget(_getCatalogUseCaseImpl);
+    super.initState();
+    _catalogControllerWidget.load();
+  }
 
   @override
   Widget build(BuildContext context) {
