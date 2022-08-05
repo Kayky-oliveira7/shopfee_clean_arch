@@ -36,44 +36,7 @@ class _HomePageState extends State<HomePage> {
                     _size(8, null),
                     const ProductSelectionWidget(),
                     _size(8, null),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const InformationListProductWidget(
-                            imageIcon: "assets/icons/filter-icon.png",
-                            text: "Filter",
-                          ),
-                          _size(null, 5),
-                          const InformationListProductWidget(
-                            imageIcon: "assets/icons/rating-icon.png",
-                            text: "Rating 4.5+",
-                          ),
-                          _size(null, 5),
-                          const InformationListProductWidget(
-                            imageIcon: "assets/icons/price-icon.png",
-                            text: "Price",
-                          ),
-                          _size(null, 5),
-                          const InformationListProductWidget(
-                            imageIcon: "assets/icons/promotion-icon.png",
-                            text: "Promotion",
-                          ),
-                          _size(null, 5),
-                          const InformationListProductWidget(
-                            imageIcon: "assets/icons/promotion-icon.png",
-                            text: "Promotion",
-                          ),
-                          _size(null, 5),
-                          const InformationListProductWidget(
-                            imageIcon: "assets/icons/promotion-icon.png",
-                            text: "Promotion",
-                          ),
-                        ],
-                      ),
-                    )
+                    const InformationListProductWidget()
                   ],
                 ),
               ),
