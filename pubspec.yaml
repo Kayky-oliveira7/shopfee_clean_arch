@@ -66,6 +66,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+  - assets/images/catalog-patel-image.png
+  - assets/images/catalog-bebida-image.png
   - assets/images/coffee_image.png
   - assets/images/coffe-milk-image.png
   - assets/images/cocoa-caramel-image.png
@@ -75,6 +77,11 @@ flutter:
   - assets/icons/rating-icon.png
   - assets/icons/price-icon.png
   - assets/icons/promotion-icon.png
+  - assets/icons/cocacola-icon.png
+  - assets/icons/fanta-laranja-icon.png
+  - assets/icons/fanta-uva-icon.png
+  - assets/icons/guarana-icon-.png
+  - assets/icons/pastel-icon-png.jpeg
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
