@@ -5,7 +5,7 @@ class ProductMockDataSourceImpl implements ProductDataSource {
   @override
   Future<List<ProductModel>> getProducts() {
     return Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(seconds: 5),
     ).then((value) {
       List<ProductModel> listProducts = [];
 
