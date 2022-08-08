@@ -1,13 +1,14 @@
+import 'package:coffee_shope/comom/app_state.dart';
+import 'package:coffee_shope/features/components/catalog-view-widget/catalog_controller_widget.dart';
+import 'package:coffee_shope/layers/data/datasources/catalog_data_source.dart';
+import 'package:coffee_shope/layers/data/datasources/mock/catalog_mock_data_source_impl.dart';
+import 'package:coffee_shope/layers/data/repoistories/catalog_repository_impl.dart';
+import 'package:coffee_shope/layers/domain/entitys/catalog_entity.dart';
+import 'package:coffee_shope/layers/domain/repositories/catalogt_repository.dart';
+import 'package:coffee_shope/layers/domain/usecases/get_catalog_usecase_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:shopfee_clean_arch/comom/app_state.dart';
-import 'package:shopfee_clean_arch/features/components/catalog-view-widget/catalog_controller_widget.dart';
-import 'package:shopfee_clean_arch/layers/data/datasources/catalog_data_source.dart';
-import 'package:shopfee_clean_arch/layers/data/datasources/mock/catalog_mock_data_source_impl.dart';
-import 'package:shopfee_clean_arch/layers/data/repoistories/catalog_repository_impl.dart';
-import 'package:shopfee_clean_arch/layers/domain/entitys/catalog_entity.dart';
-import 'package:shopfee_clean_arch/layers/domain/repositories/catalogt_repository.dart';
-import 'package:shopfee_clean_arch/layers/domain/usecases/get_catalog_usecase_impl.dart';
+
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CatalogWidget extends StatefulWidget {

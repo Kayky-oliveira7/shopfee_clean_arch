@@ -1,4 +1,4 @@
-import 'package:shopfee_clean_arch/layers/domain/entitys/product_entity.dart';
+import 'package:coffee_shope/layers/domain/entitys/product_entity.dart';
 
 abstract class ProductRepository {
   Future<List<ProductEntity>> getProducts();

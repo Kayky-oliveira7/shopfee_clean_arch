@@ -1,7 +1,7 @@
-import 'package:shopfee_clean_arch/layers/data/datasources/product_data_source.dart';
-import 'package:shopfee_clean_arch/layers/domain/entitys/product_entity.dart';
-import 'package:shopfee_clean_arch/layers/domain/mappers/product_model_to_entity_mapper.dart';
-import 'package:shopfee_clean_arch/layers/domain/repositories/product_repository.dart';
+import 'package:coffee_shope/layers/data/datasources/product_data_source.dart';
+import 'package:coffee_shope/layers/domain/entitys/product_entity.dart';
+import 'package:coffee_shope/layers/domain/mappers/product_model_to_entity_mapper.dart';
+import 'package:coffee_shope/layers/domain/repositories/product_repository.dart';
 
 class ProductRepositoryImpl implements ProductRepository {
   final ProductDataSource _productDataSource;

@@ -1,14 +1,14 @@
+import 'package:coffee_shope/comom/app_state.dart';
+import 'package:coffee_shope/features/components/list-product-widget/products_controller.dart';
+import 'package:coffee_shope/layers/data/datasources/mock/product_mock_data_sourc_impl.dart';
+import 'package:coffee_shope/layers/data/datasources/product_data_source.dart';
+import 'package:coffee_shope/layers/data/repoistories/product_repository_impl.dart';
+import 'package:coffee_shope/layers/domain/entitys/product_entity.dart';
+import 'package:coffee_shope/layers/domain/repositories/product_repository.dart';
+import 'package:coffee_shope/layers/domain/usecases/get_product_usecase_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shopfee_clean_arch/comom/app_state.dart';
-import 'package:shopfee_clean_arch/features/components/list-product-widget/products_controller.dart';
-import 'package:shopfee_clean_arch/layers/data/datasources/mock/product_mock_data_sourc_impl.dart';
-import 'package:shopfee_clean_arch/layers/data/datasources/product_data_source.dart';
-import 'package:shopfee_clean_arch/layers/data/repoistories/product_repository_impl.dart';
-import 'package:shopfee_clean_arch/layers/domain/entitys/product_entity.dart';
-import 'package:shopfee_clean_arch/layers/domain/repositories/product_repository.dart';
-import 'package:shopfee_clean_arch/layers/domain/usecases/get_product_usecase_impl.dart';
 
 class ListViewProductsWidget extends StatefulWidget {
   const ListViewProductsWidget({Key? key}) : super(key: key);
