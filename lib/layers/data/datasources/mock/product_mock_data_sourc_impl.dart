@@ -1,5 +1,5 @@
-import 'package:shopfee_clean_arch/layers/data/datasources/product_data_source.dart';
-import 'package:shopfee_clean_arch/layers/data/models/product_model.dart';
+import 'package:coffee_shope/layers/data/datasources/product_data_source.dart';
+import 'package:coffee_shope/layers/data/models/product_model.dart';
 
 class ProductMockDataSourceImpl implements ProductDataSource {
   @override

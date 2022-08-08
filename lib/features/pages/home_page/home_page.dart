@@ -1,11 +1,11 @@
+import 'package:coffee_shope/features/components/catalog-view-widget/catalog_widget.dart';
+import 'package:coffee_shope/features/components/information_list_product_widget/information_list_product_widget.dart';
+import 'package:coffee_shope/features/components/search-bar-widget/search_bar_widget.dart';
+import 'package:coffee_shope/features/pages/coffee_page.dart';
+import 'package:coffee_shope/features/pages/non_coffee_page.dart';
+import 'package:coffee_shope/features/pages/pastry_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shopfee_clean_arch/features/components/catalog-view-widget/catalog_widget.dart';
-import 'package:shopfee_clean_arch/features/components/information_list_product_widget/information_list_product_widget.dart';
-import 'package:shopfee_clean_arch/features/components/search-bar-widget/search_bar_widget.dart';
-import 'package:shopfee_clean_arch/features/pages/coffee_page.dart';
-import 'package:shopfee_clean_arch/features/pages/non_coffee_page.dart';
-import 'package:shopfee_clean_arch/features/pages/pastry_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
