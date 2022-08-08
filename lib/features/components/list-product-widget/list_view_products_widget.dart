@@ -1,5 +1,6 @@
 import 'package:coffee_shope/comom/app_state.dart';
 import 'package:coffee_shope/features/components/list-product-widget/products_controller.dart';
+import 'package:coffee_shope/features/components/load_shimmer_widget/load_shimmer_widget.dart';
 import 'package:coffee_shope/layers/data/datasources/mock/product_mock_data_sourc_impl.dart';
 import 'package:coffee_shope/layers/data/datasources/product_data_source.dart';
 import 'package:coffee_shope/layers/data/repoistories/product_repository_impl.dart';
@@ -51,7 +52,7 @@ class _ListViewProductsWidgetState extends State<ListViewProductsWidget> {
   }
 
   Widget _loading() {
-    return const Center(child: CircularProgressIndicator());
+    return const LoadShimmerWidget();
   }
 
   Widget _listProducts(AppState state) {
