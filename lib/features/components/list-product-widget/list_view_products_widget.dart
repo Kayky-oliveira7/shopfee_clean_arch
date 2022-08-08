@@ -58,49 +58,58 @@ class _ListViewProductsWidgetState extends State<ListViewProductsWidget> {
   Widget _listProducts(AppState state) {
     if (state is DataAppState<List<ProductEntity>>) {
       for (var i = 0; i < state.data.length; i++) {
-        return ListView.builder(
-          itemBuilder: (context, index) {
-            var products = state.data[index];
+        return RefreshIndicator(
+          onRefresh: _onRefresh,
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              var products = state.data[index];
 
-            return ListTile(
-              leading: CircleAvatar(
-                backgroundColor: const Color(0xffEFEBE9),
-                child: Image.asset(
-                  products.imageProduct,
-                  fit: BoxFit.cover,
-                  height: 69,
+              return ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: const Color(0xffEFEBE9),
+                  child: Image.asset(
+                    products.imageProduct,
+                    fit: BoxFit.cover,
+                    height: 69,
+                  ),
                 ),
-              ),
-              title: Text(
-                products.nameProduct,
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                  color: const Color(0xff555555),
+                title: Text(
+                  products.nameProduct,
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    color: const Color(0xff555555),
+                  ),
                 ),
-              ),
-              subtitle: Text(
-                products.productRecipe,
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 12,
-                  color: const Color(0xff555555),
+                subtitle: Text(
+                  products.productRecipe,
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    color: const Color(0xff555555),
+                  ),
                 ),
-              ),
-              trailing: Text(
-                "Rp:${products.price.toString()}",
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14,
-                  color: const Color(0xff3C3C3C),
+                trailing: Text(
+                  "Rp:${products.price.toString()}",
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14,
+                    color: const Color(0xff3C3C3C),
+                  ),
                 ),
-              ),
-            );
-          },
-          itemCount: state.data.length,
+              );
+            },
+            itemCount: state.data.length,
+          ),
         );
       }
     }
     return Container();
+  }
+
+  Future<void> _onRefresh() {
+    return Future.delayed(
+      const Duration(seconds: 4),
+    );
   }
 }
